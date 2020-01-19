@@ -35,7 +35,7 @@ data=data.reset_index()
 data=data.drop(axis=1,columns=['CHAS'])
 
 #Scale each feature from a range from 1 to n 
-#Note: It seems that increasing n increases accuracy
+#Note: It seems that increasing n increases accuracy. but only up to a point
 for feature in data.columns[:-1]:
   Min=min(data[feature])
   Max=max(data[feature])
