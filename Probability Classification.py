@@ -1,5 +1,4 @@
-#At n=1000000, maximum accuracy of 0.9397590361445783
-#And RMSE of 2.1027807177611155  
+#Accuracy of 0.9397590361445783 and RMSE of 2.1027807177611155  
 
 from sklearn.datasets import load_boston
 import pandas as pd
@@ -33,7 +32,6 @@ data=data.reset_index()
 data=data.drop(axis=1,columns=['CHAS'])
 
 #Scale each feature from a range from 1 to n 
-#Note: It seems that increasing n increases accuracy, but only up to a point
 for feature in data.columns[:-1]:
   Mean=np.mean(data[feature])
   Stdev=np.std(data[feature])
